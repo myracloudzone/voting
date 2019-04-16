@@ -1,0 +1,51 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" (click)="sidebarToggle()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+            <li>
+                <a id="sidebar-btn" tabindex="0" (click)="toggleSideBar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="pull-right">
+                <a id="accountSettingDropdown" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <img class="userProfile" src="/assets/img/avatarMale.png" alt="">
+                </a>
+                <ul class="dropdown-menu" id="accountSettingDropdownBox" aria-labelledby="accountSettingDropdown">
+                    <li>
+                        <div class="col-sm-12 text-center">
+                            <img class="userImageNavigation" src="/assets/img/avatarMale.png" alt="">
+                            <p class="color-white pt5 pb5">
+                                {{sharedService.loggedInMember != null ? sharedService.loggedInMember.email : ''}}
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <div class="dropdown-divider"></div>
+                    <li>
+                        <a class="dropdown-item" href="" (click)="changePassword()">
+                            Change Password
+                        </a>
+                    </li>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
+                    <li>
+                        <a class="dropdown-item" (click)="logoutUser()">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,25 @@
+{
+    "connConfig": {
+        "client": "mysql",
+        "debug": false,
+        "connection": {
+            "host": "localhost",
+            "user": "root",
+            "password": "root",
+            "database": "polling"
+        }
+    },
+    "mail": {
+        "username": "hellfakeid123@gmail.com",
+        "password": "fakeid123",
+        "from": "donot-reply@votingportal.com",
+        "port": 465,
+        "secure": true,
+        "host": "smtp.gmail.com"
+    },
+    "logFile": "/Users/akshaysoni/logs/VAPP.log",
+    "outputFolder": "/home/akshaysoni/logs",
+    "queryDebugMode": false,
+    "webSocketPort": 1337,
+    "port": 3011
+}

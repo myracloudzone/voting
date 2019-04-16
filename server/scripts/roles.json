@@ -1,0 +1,26 @@
+{
+    "ADMIN": {
+        "dashboardView": true,
+        "voteCardView": true,
+        "votersView": true,
+        "partiesView": true,
+        "partyMemberView": true,
+        "profileView": true,
+        "voteCardAPI": false,
+        "votersAPI": true,
+        "partiesAPI": true,
+        "partyMemberAPI": true
+    },
+    "USER": {
+        "dashboardView": true,
+        "voteCardView": true,
+        "votersView": false,
+        "partiesView": false,
+        "partyMemberView": false,
+        "profileView": true,
+        "voteCardAPI": true,
+        "votersAPI": false,
+        "partiesAPI": false,
+        "partyMemberAPI": false
+    }
+}

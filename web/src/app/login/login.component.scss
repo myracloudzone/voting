@@ -1,0 +1,90 @@
+@import "./../../assets/sass/xtreme/variables";
+
+
+.fill {
+    background: $common-screen-color;
+    min-height: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: url('./../../assets/img/logoImage.png');
+    background-size: cover;
+}
+
+
+.form_bg {
+    background: rgba(0, 0, 0, .6);
+    color: $color-white;
+    padding: 35px;
+    border-radius: 10px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 480px;
+    height: 450px;
+    box-shadow: 0 1px 10px #FFFFFF inset, 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.align-center {
+    text-align: center;
+}
+
+.fw500 {
+    font-weight: 500;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.submitButton {
+    width: 100%;
+    background: $color-blue;
+    color: $color-white;
+}
+
+.login-icon {
+    height: 80px;
+    width: 80px;
+    background: $color-blue;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding-top: 30px;
+
+    i {
+        font-size: 20px;
+    }
+}
+
+// -------- Media Queries- ---------- //
+@media (max-width: 460px) {
+    .form_bg {
+        color: $color-white;
+        padding: 25px;
+        border-radius: 10px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 350px;
+        height: 420px;
+        box-shadow: 0 1px 10px #FFFFFF inset, 0 1px 1px rgba(0, 0, 0, 0.25);
+    }
+
+    .login-title {
+        font-size: 26px;
+    }
+
+    .login-sing-up-title {
+        font-size: 16px;
+    }
+}

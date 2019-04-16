@@ -1,0 +1,39 @@
+.custom-btn-info {
+    margin-top: -25px;
+    padding: 5px 10px;
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.w20 {
+    width: 20px;
+}
+
+#cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.80;
+    background: #aaa;
+    z-index: 10;
+    display: none;
+}
+
+.cover-item {
+    margin-top: 300px;
+    color: #000;
+    z-index: 100000;
+    font-size: 50px;
+    position: absolute;
+}
+
+.cover-item-label {
+    margin-top: 345px;
+    color: #000;
+    z-index: 100000;
+    font-size: 50px;
+    position: absolute;
+}

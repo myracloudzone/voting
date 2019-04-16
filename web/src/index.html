@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+
+<head>
+	<base href="/">
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Voting App</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+
+	<!--     Fonts and icons     -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+	<style media="screen">
+		#loader {
+			position: absolute;
+			display: block;
+			left: 0;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 1;
+			-webkit-transform: translate3d(0, -50%, 0);
+			-moz-transform: translate3d(0, -50%, 0);
+			-o-transform: translate3d(0, -50%, 0);
+			-ms-transform: translate3d(0, -50%, 0);
+			transform: translate3d(0, -50%, 0);
+			text-align: center;
+			border-radius: 50%;
+			width: 45px;
+			height: 45px;
+			top: 50%;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="spinnerContainer" class="hiddenLoader spinner center">
+		<div class="lds-roller">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<app-root>
+		<div id="loader"><img src="assets/img/loader-preview.svg" alt="loading"></div>
+	</app-root>
+</body>
+
+</html>
+
+<style>
+	/* Global Style */
+	.spinner {
+		position: fixed;
+		padding: 0px;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 9998;
+		background: #000;
+		opacity: 0.6;
+		transition: opacity 0.3s linear;
+	}
+
+
+
+	.spinner img {
+		position: fixed;
+		padding: 0px;
+		z-index: 10;
+		background: #000;
+		opacity: 0.6;
+		transition: opacity 0.3s linear;
+	}
+
+	.hiddenLoader {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s 0.3s, opacity 0.3s linear;
+	}
+
+	.center {
+		margin: auto;
+		width: 100%;
+	}
+
+
+
+	.lds-roller {
+		display: block;
+		position: relative;
+		width: 64px;
+		height: 64px;
+		left: 48%;
+		top: 47%;
+	}
+
+	.lds-roller div {
+		animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+		transform-origin: 32px 32px;
+	}
+
+	.lds-roller div:after {
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: #fff;
+		margin: -3px 0 0 -3px;
+	}
+
+	.lds-roller div:nth-child(1) {
+		animation-delay: -0.036s;
+	}
+
+	.lds-roller div:nth-child(1):after {
+		top: 50px;
+		left: 50px;
+	}
+
+	.lds-roller div:nth-child(2) {
+		animation-delay: -0.072s;
+	}
+
+	.lds-roller div:nth-child(2):after {
+		top: 54px;
+		left: 45px;
+	}
+
+	.lds-roller div:nth-child(3) {
+		animation-delay: -0.108s;
+	}
+
+	.lds-roller div:nth-child(3):after {
+		top: 57px;
+		left: 39px;
+	}
+
+	.lds-roller div:nth-child(4) {
+		animation-delay: -0.144s;
+	}
+
+	.lds-roller div:nth-child(4):after {
+		top: 58px;
+		left: 32px;
+	}
+
+	.lds-roller div:nth-child(5) {
+		animation-delay: -0.18s;
+	}
+
+	.lds-roller div:nth-child(5):after {
+		top: 57px;
+		left: 25px;
+	}
+
+	.lds-roller div:nth-child(6) {
+		animation-delay: -0.216s;
+	}
+
+	.lds-roller div:nth-child(6):after {
+		top: 54px;
+		left: 19px;
+	}
+
+	.lds-roller div:nth-child(7) {
+		animation-delay: -0.252s;
+	}
+
+	.lds-roller div:nth-child(7):after {
+		top: 50px;
+		left: 14px;
+	}
+
+	.lds-roller div:nth-child(8) {
+		animation-delay: -0.288s;
+	}
+
+	.lds-roller div:nth-child(8):after {
+		top: 45px;
+		left: 10px;
+	}
+
+	@keyframes lds-roller {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+</style>

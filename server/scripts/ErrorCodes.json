@@ -1,0 +1,34 @@
+{
+    "USERNAME_NOT_EXIST": {
+        "errorCode": "SE-01",
+        "message": "No Account exist with the given username."
+    },
+    "INVALID_USERNAME_PASSWORD": {
+        "errorCode": "SE-02",
+        "message": "Invalid Username/Password."
+    },
+    "ACCOUNT_LOCKED": {
+        "errorCode": "SE-03",
+        "message": "Your Account has been locked out. Please contact your System Admin to reset it."
+    },
+    "ACCOUNT_ALREADY_EXIST": {
+        "errorCode": "SE-04",
+        "message": "Account with the given email already exist. Please choose a different email."
+    },
+    "USERNAME_REQUIRED": {
+        "errorCode": "SE-05",
+        "message": "Username is required."
+    },
+    "PASSWORD_REQUIRED": {
+        "errorCode": "SE-06",
+        "message": "Password is required."
+    },
+    "USERNAME_VALID": {
+        "errorCode": "SE-07",
+        "message": "Username should be of maximum of 50 character."
+    },
+    "PASSWORD_VALID": {
+        "errorCode": "SE-08",
+        "message": "Password should be of maximum of 15 character."
+    }
+}

@@ -1,0 +1,15 @@
+<div class="sidebar-wrapper" id="sidebar-wrapper">
+    <div class="logo">
+        <img src="/assets/img/logo.gif" />
+    </div>
+    <ul class="nav responsive-nav">
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" (mouseenter)="toggleSideBar('event')"
+            (mouseleave)="toggleSideBar('event')"
+            [ngClass]="sharedService.loggedInMember != null && sharedService.loggedInMember.allowedRoles != null && sharedService.loggedInMember.allowedRoles[menuItem.class] == true ? menuItem.class : 'hidden'">
+            <a [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

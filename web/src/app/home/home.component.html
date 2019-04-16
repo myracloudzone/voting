@@ -1,0 +1,15 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div *ngIf="dataLoaded">
+                    <nvd3 [options]="options" [data]="data"></nvd3>
+                </div>
+                <br />
+                <p class="text-center votingLabel">
+                    Voting Staticstics
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

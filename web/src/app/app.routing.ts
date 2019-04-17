@@ -9,7 +9,7 @@ import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'voters',
+        redirectTo: 'login',
         pathMatch: 'full'
     },
     {
@@ -28,7 +28,7 @@ const routes: Routes = [
     },
     {
         path: '**',
-        redirectTo: 'voters'
+        redirectTo: 'login'
     }
 ];
 

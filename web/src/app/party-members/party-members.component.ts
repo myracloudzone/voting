@@ -69,6 +69,7 @@ export class PartyMembersComponent implements OnInit {
     }
 
     addNewPartyMember(content, partyMemberForEdit) {
+        this.selectedPartyMember = {};
         if (partyMemberForEdit != null) {
             this.selectedPartyMember = partyMemberForEdit;
         }
@@ -92,6 +93,7 @@ export class PartyMembersComponent implements OnInit {
         if (this.selectedPartyMember['id'] == null) {
             this.partyMemberService.createPartyMember(this.selectedPartyMember).subscribe(
                 (data) => {
+                    this.notifierService.notify('success', 'Party-Member created succesfully.');
                     this.closeModal();
                 },
                 (error) => {
@@ -102,6 +104,7 @@ export class PartyMembersComponent implements OnInit {
         } else {
             this.partyMemberService.updatePartyMember(this.selectedPartyMember).subscribe(
                 (data) => {
+                    this.notifierService.notify('success', 'Party-Member updated succesfully.');
                     this.closeModal();
                 },
                 (error) => {
@@ -119,6 +122,7 @@ export class PartyMembersComponent implements OnInit {
         this.sharedService.showLoader();
         this.partyMemberService.deletePartyMember({ id: party.id }).subscribe(
             (data) => {
+                this.notifierService.notify('success', 'Party-Member deleted succesfully.');
                 this.getPartyMemberList();
             },
             (error) => {

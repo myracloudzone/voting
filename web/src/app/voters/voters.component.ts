@@ -49,6 +49,7 @@ export class VotersComponent implements OnInit {
     }
 
     addNewVoter(content, voterForEdit) {
+        this.voter = {};
         if (voterForEdit != null) {
             this.voter = voterForEdit;
         }
@@ -72,7 +73,7 @@ export class VotersComponent implements OnInit {
         if (this.voter['id'] == null) {
             this.voterService.createVoter(this.voter).subscribe(
                 (data) => {
-                    this.notifierService.notify('success', 'Voter created/updated succesfully.');
+                    this.notifierService.notify('success', 'Voter created succesfully.');
                     this.closeModal();
                 },
                 (error) => {
@@ -82,6 +83,7 @@ export class VotersComponent implements OnInit {
         } else {
             this.voterService.updateVoter(this.voter).subscribe(
                 (data) => {
+                    this.notifierService.notify('success', 'Voter updated succesfully.');
                     this.closeModal();
                 },
                 (error) => {
@@ -96,6 +98,7 @@ export class VotersComponent implements OnInit {
             return;
         }
         this.voterService.deleteVoter({ id: voter.id }).subscribe((data) => {
+            this.notifierService.notify('success', 'Voter deleted succesfully.');
             this.getVoterList();
         });
     }

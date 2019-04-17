@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
             (data2) => {
                 this.sharedService.hideLoader();
                 this.sharedService['loggedInMember'] = data2;
-                this.router.navigate(['/voting']);
+                this.router.navigate(['/dashboard']);
             },
             (error) => {
                 this.sharedService.hideLoader();
